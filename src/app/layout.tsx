@@ -5,30 +5,56 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Fluxo Odonto | Crescimento para Clínicas Odontológicas",
-  description: "Utilizamos tecnologia, SEO, automação e inteligência artificial para transformar clínicas odontológicas em operações digitais de alta performance.",
+  title: "Fluxo Odonto | Sistema Inteligente de Crescimento para Clínicas",
+  description:
+    "Não somos agência. Somos tecnologia. Utilizamos Inteligência Artificial, SEO, automação e tráfego pago para transformar sua clínica odontológica em uma operação digital de alta performance.",
+  keywords: [
+    "marketing odontológico",
+    "crescimento de consultório",
+    "inteligência artificial odontologia",
+    "fluxo odonto",
+    "pacientes de implantes",
+    "alinhadores invisíveis",
+    "gestão de tráfego odontologia",
+  ],
+  authors: [{ name: "Fluxo Odonto", url: "https://fluxoodonto.com.br" }],
   openGraph: {
-    title: "Fluxo Odonto | Tecnologia em Odontologia",
-    description: "Crescimento inteligente para clínicas.",
-    url: "https://fluxoodonto.com",
+    title: "Fluxo Odonto | Sistema Inteligente de Crescimento para Clínicas",
+    description:
+      "Transforme sua clínica em uma operação digital de alta performance com Inteligência Artificial, automação e aquisição de pacientes de alto ticket.",
+    url: "https://fluxoodonto.com.br",
     siteName: "Fluxo Odonto",
     images: [
       {
-        url: "/logo.png",
-        width: 800,
-        height: 600,
+        url: "/dashboard.png",
+        width: 1200,
+        height: 630,
+        alt: "FlowOS Dashboard Preview",
       },
     ],
     locale: "pt_BR",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fluxo Odonto | Sistema Inteligente de Crescimento",
+    description:
+      "Tecnologia, automação e inteligência artificial para crescimento de clínicas odontológicas.",
+    images: ["/dashboard.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -37,31 +63,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Fluxo Odonto",
-    "url": "https://fluxoodonto.com",
-    "logo": "https://fluxoodonto.com/logo.png",
-    "description": "Utilizamos tecnologia, SEO, automação e inteligência artificial para transformar clínicas odontológicas em operações digitais de alta performance.",
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "SIKNODE"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+55-21-96605-2646",
-      "contactType": "customer service"
-    }
-  };
-
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${manrope.variable} scroll-smooth antialiased`}>
-      <body className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
-        />
+    <html lang="pt-BR" className={`${inter.variable} ${manrope.variable} dark scroll-smooth`}>
+      <body className="font-sans antialiased bg-bg-dark text-slate-100 min-h-screen">
         {children}
       </body>
     </html>
