@@ -15,6 +15,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fluxoodonto.com.br"),
   title: "Fluxo Odonto | Sistema Inteligente de Crescimento para Clínicas",
   description:
     "Não somos agência. Somos tecnologia. Utilizamos Inteligência Artificial, SEO, automação e tráfego pago para transformar sua clínica odontológica em uma operação digital de alta performance.",

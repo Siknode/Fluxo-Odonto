@@ -124,8 +124,14 @@ export default function NeuralBackground() {
         node.y += node.vy;
 
         // Bounce on boundaries
-        if (node.x < 0 || node.x > width) node.vx *= -1;
-        if (node.y < 0 || node.y > height) node.vy *= -1;
+        if (node.x < 0 || node.x > width) {
+          node.vx *= -1;
+          node.x = Math.max(0, Math.min(width, node.x));
+        }
+        if (node.y < 0 || node.y > height) {
+          node.vy *= -1;
+          node.y = Math.max(0, Math.min(height, node.y));
+        }
 
         // Mouse interaction (gravity effect)
         const dx = mouse.x - node.x;

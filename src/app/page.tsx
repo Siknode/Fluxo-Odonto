@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import {
-  Sparkles,
   ArrowRight,
   TrendingDown,
   MapPin,
@@ -11,12 +10,6 @@ import {
   Cpu,
   Brain,
   Check,
-  Shield,
-  Zap,
-  Globe,
-  Database,
-  ArrowUpRight,
-  SmartphoneIcon,
   MessageSquare
 } from "lucide-react";
 
@@ -329,7 +322,7 @@ export default function Home() {
                 Apresentamos o FlowOS
               </h2>
               <p className="text-xs md:text-sm text-slate-400 leading-relaxed font-light">
-                Esqueça planilhas desorganizadas ou CRM genéricos que não compreendem a dinâmica de uma clínica. O **FlowOS** é nossa infraestrutura de crescimento focada na jornada do paciente. 
+                Esqueça planilhas desorganizadas ou CRM genéricos que não compreendem a dinâmica de uma clínica. O <strong className="font-semibold text-slate-200">FlowOS</strong> é nossa infraestrutura de crescimento focada na jornada do paciente. 
               </p>
 
               <p className="text-xs text-slate-400 leading-relaxed font-light">

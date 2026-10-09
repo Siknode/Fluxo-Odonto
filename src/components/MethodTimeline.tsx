@@ -6,8 +6,7 @@ import {
   Map,
   Code2,
   Cpu,
-  TrendingUp,
-  ChevronDown
+  TrendingUp
 } from "lucide-react";
 
 interface Step {
