@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, MessageSquare, Instagram, Mail } from "lucide-react";
+import { MessageSquare, Instagram, Mail } from "lucide-react";
 
 export default function Footer() {
   return (

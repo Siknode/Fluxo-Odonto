@@ -7,10 +7,7 @@ import {
   Users,
   TrendingUp,
   Brain,
-  MessageSquare,
   Sparkles,
-  Search,
-  DollarSign,
   ChevronRight,
   ShieldCheck,
   CheckCircle2,
@@ -66,9 +63,7 @@ export default function FlowOSMockup() {
       {/* Outer ambient glow that tracks tilt */}
       <motion.div
         className="absolute -inset-4 rounded-2xl bg-gradient-to-tr from-brand-deep/30 via-brand-blue/10 to-brand-red/20 opacity-40 blur-2xl -z-10"
-        style={{
-          transform: `translateX(${translateX}px) translateY(${translateY}px) translateZ(-40px)`
-        }}
+        style={{ x: translateX, y: translateY, z: -40 }}
       />
 
       {/* Main Glass Panel Card */}

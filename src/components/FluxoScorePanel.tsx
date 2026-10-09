@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Search,
   Zap,
@@ -67,12 +67,9 @@ export default function FluxoScorePanel() {
     }
   ]);
 
-  const [overallScore, setOverallScore] = useState(0);
-
-  useEffect(() => {
-    const total = metrics.reduce((acc, curr) => acc + curr.value * curr.weight, 0);
-    setOverallScore(Math.round(total));
-  }, [metrics]);
+  const overallScore = Math.round(
+    metrics.reduce((acc, curr) => acc + curr.value * curr.weight, 0)
+  );
 
   const handleSliderChange = (id: string, val: number) => {
     setMetrics((prev) =>
@@ -149,7 +146,8 @@ export default function FluxoScorePanel() {
                 min="0"
                 max="100"
                 value={m.value}
-                onChange={(e) => handleSliderChange(m.id, parseInt(e.target.value))}
+                aria-label={m.name}
+                onChange={(e) => handleSliderChange(m.id, parseInt(e.target.value, 10))}
                 className="w-full h-1 bg-slate-900 rounded-lg appearance-none cursor-pointer accent-brand-blue"
               />
               
